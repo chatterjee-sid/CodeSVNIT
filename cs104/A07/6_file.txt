@@ -1,0 +1,7 @@
+ClubID  Name        Year    Rollno      Active
+1       Luffy       3       21BCSE023   Yes
+2       Light       4       20BCSE014   Yes
+3       Jotaro      3       21BCSE039   No
+4       Tanjiro     2       22BCSE046   Yes
+5       Yuji        2       22BCSE003   No
+6       Kiyotaka    4       20BCSE099   Yes

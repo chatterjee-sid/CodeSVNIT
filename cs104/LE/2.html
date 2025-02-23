@@ -1,0 +1,143 @@
+<html>
+<head>
+    <title>BTech Application for DoCSE</title>
+    <style>
+        #navbar {
+            display: flex;
+            background: cyan;
+            justify-content: flex-end;
+            padding-right: 2px;
+        }
+        .navbar_li {
+            list-style-type: none;
+            margin: 2px;
+            background-color: cadetblue;
+            height: 20px;
+            width: 80px;
+        }
+        .navbar_a {
+            padding: auto;
+            text-align: center;
+            color: white;
+            text-decoration: none;
+        }
+        .navbar_li:hover {
+            cursor: pointer;
+        }
+        td {
+            border: 1px solid black;
+            height: 40px;
+        }
+        input {
+            width: 90%;
+        }
+        #footer,
+        #header,
+        #contact {
+            text-align: center;
+        }
+        #img {
+            height: 100px;
+        }
+        #thead {
+            background-color: cyan;
+        }
+        #application {
+            margin: auto;
+            border: 2px solid black;
+            text-align: center;
+            width: 30%;
+        }
+        #marquee {
+            color: red;
+        }
+        #validate {
+            margin-left: 45%;
+            width: 10%;
+            background-color: rgb(88, 88, 255);
+        }
+        #validate:hover {
+            background-color: burlywood;
+        }
+    </style>
+    <script>
+        function validate() {
+            let uname = document.getElementById('username').value;
+            let regex = new RegExp('^[A-Za-z0-9_.-]+$');
+            if (regex.test(uname) == false) {
+                alert("Invalid Username");
+                return;
+            }
+            let pw = document.getElementById('password').value;
+            if (pw.length < 6) {
+                alert("Password too short");
+                return;
+            } else if (pw.length > 16) {
+                alert("Password too long");
+                return;
+            } else {
+                let cpw = document.getElementById('confirm').value;
+                if (cpw != pw) {
+                    alert("Password does not match");
+                    return;
+                }
+            }
+            document.getElementById('form').reset();
+            alert("Application Submission Successful");
+        };
+    </script>
+</head>
+<body>
+    <div id="header">
+        <h1>B.Tech. Application Login for DoCSE</h1>
+        <img src="svnit.jpg" alt="logo_svnit" id="img"><br>
+        <h3>S.V. National Institute of Technology, Surat</h3>
+        <ul id="navbar">
+            <li class="navbar_li"><a class="navbar_a" href="#">Home</a></li>
+            <li class="navbar_li"><a class="navbar_a" href="#">Admin</a></li>
+            <li class="navbar_li"><a class="navbar_a" href="#">Information</a></li>
+            <li class="navbar_li"><a class="navbar_a" href="#">Results</a></li>
+            <li class="navbar_li"><a class="navbar_a" href="#">Brochure</a></li>
+        </ul>
+    </div>
+    <hr>
+    <div id="marquee">
+        <marquee>Last Date for submission of application extended to 10<sup>th</sup> April 2023. Mail us at the below mentioned address to get proper procedures for further steps.</marquee>
+    </div>
+    <hr><br>
+    <form method="post" id="form">
+        <table id="application">
+            <tr>
+                <td colspan="2" id="thead">Apply Here</td>
+            </tr>
+            <tr>
+                <td style="width: 30%;"> Username: </td>
+                <td><input type="text" placeholder="Username" id="username"></td>
+            </tr>
+            <tr>
+                <td>Password: </td>
+                <td><input type="password" placeholder="Password" id="password"></td>
+            <tr>
+                <td>Confirm Password: </td>
+                <td><input type="password" placeholder="Password" id="confirm"></td>
+            </tr>
+        </table>
+    </form>
+    <button id="validate" onclick="validate()">Validate</button>
+    <br>
+    <hr>
+    <div id="contact">
+        Mail us your queries here<br>
+        <span style="font-size: larger;">
+            <a href="mailto:u23cs028@coed.svnit.ac.in">application_queries@coed.svnit.ac.in</a>
+        </span>
+    </div>
+    <br>
+    <hr>
+    <div id="footer">
+        &lt/&gt WPP - Lab Exam &lt/&gt<br>
+        Adm: U23CS028<br>
+        F1, B.Tech-I, DoCSE, SVNIT
+    </div>
+</body>
+</html>

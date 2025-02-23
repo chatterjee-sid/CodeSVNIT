@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WPP Assignment 2</title>
+    <style>
+        fieldset {
+            width: 100%;
+            margin: auto;
+        }
+        table {
+            width: 100%;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <header>
+            <h1 style="text-align: center;">SAVING BANK ACCOUNT OPENING FORM</h1>
+            <h3 style="text-align: center;">(for BASIC/SMALL SB A/c)</h3>
+        </header>
+        <hr>
+        <main style="padding-left: 5%; padding-right: 5%;">
+            <fieldset>
+                <legend><b>For Bank Use Only</b></legend>
+                <table>
+                    <tr>
+                        <td colspan="2">Name and Code of the Branch</td>
+                    </tr>
+                    <tr>
+                        <td width="10%">Cust ID</td>
+                        <td width="20%"><input type="text" name="custid"></td>
+                        <td width="45%"></td>
+                        <td width="5%">Date</td>
+                        <td width="20%"><input type="date" name="date"></td>
+                    </tr>
+                    <tr>
+                        <td>A/C No.</td>
+                        <td><input type="text" name="acno" pattern="[0-9]+"></td>
+                        <td></td>
+                        <td>Time</td>
+                        <td><input type="time" step="1" name="time"></td>
+                    </tr>
+                </table>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend><b>Personal Details</b></legend>
+                <table border="1px" cellspacing="5px" style="margin: auto;">
+                    <tr>
+                        <td width="2%">1</td>
+                        <td width="20%">Name in Full (Mr / Ms)</td>
+                        <td colspan="3"><input type="text" name="name" pattern="[a-zA-Z]+" style="width: 90%;"></td>
+                        <td width="13%" rowspan="4">Image</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Father / Husband / Guardian Name</td>
+                        <td colspan="3"><input type="text" name="aname" pattern="[a-zA-Z]+" style="width: 90%;"></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Gender</td>
+                        <td width="25%">
+                            <input type="radio" name="gender" value="male">Male<br>
+                            <input type="radio" name="gender" value="female">Female
+                        </td>
+                        <td width="15%">Date of Birth</td>
+                        <td width="25%"><input type="date" name="dob" style="width: 90%;"></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Occupation</td>
+                        <td><input type="text" name="job" style="width: 90%;"></td>
+                        <td>Category</td>
+                        <td>
+                            <select name="category" style="width: 90%;">
+                                <option value="gen">-select-</option>
+                                <option value="sc">SC</option>
+                                <option value="st">ST</option>
+                                <option value="obc">OBC</option>
+                                <option value="sebc">SEBC</option>
+                                <option value="gen">General</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Marital Status</td>
+                        <td colspan="2">
+                            <input type="radio" name="marital" value="married">Married<br>
+                            <input type="radio" name="marital" value="unmarried">Unmarried<br>
+                            <input type="radio" name="marital" value="widowed">Widowed
+                        </td>
+                        <td align="right">Signature</td>
+                        <td></td>
+                    </tr>
+                </table>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend><b>Contact Details</b></legend>
+                <table border="1px" cellspacing="5px">
+                    <tr>
+                        <td width="12%">Mobile No. (1)</td>
+                        <td width="22%"><input type="text" name="mob1" pattern="[0-9]+" size="10" style="width: 90%;">
+                        </td>
+                        <td width="11%">Mobile No. (2)</td>
+                        <td width="22%"><input type="text" name="mob2" pattern="[0-9]+" size="10" style="width: 90%;">
+                        </td>
+                        <td width="11%">Telephone / Landline</td>
+                        <td width="22%"><input type="text" name="tel" pattern="[0-9]+" size="10" style="width: 90%;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Personal Email</td>
+                        <td colspan="2"><input type="email" name="permail" style="width: 90%;"></td>
+                        <td>Professional Email</td>
+                        <td colspan="2"><input type="email" name="promail" style="width: 90%;"></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Current Address</td>
+                        <td rowspan="2"><textarea name="caddress" style="height: 100%; width: 90%;"
+                                wrap="soft"></textarea></td>
+                        <td>Village / City</td>
+                        <td><input type="text" name="city" pattern="[a-zA-Z]+" style="width: 90%;"></td>
+                        <td>District</td>
+                        <td><input type="text" name="dist" pattern="[a-zA-Z]+" style="width: 90%;"></td>
+                    </tr>
+                    <tr>
+                        <td>State</td>
+                        <td>
+                            <select name="state" style="width: 80%;">
+                                <option value="none">-Select-</option>
+                                <option value="RJ">Rajasthan</option>
+                                <option value="GJ">Gujarat</option>
+                                <option value="MP">Madhya Pradesh</option>
+                                <option value="MH">Maharashtra</option>
+                                <option value="Goa">Goa</option>
+                                <option value="DNDD">Dadra, Nagar Haveli, Daman & Diu</option>
+                            </select>
+                        </td>
+                        <td>Pincode</td>
+                        <td><input type="text" name="pincode" pattern="[0-9]+" style="width: 90%;"></td>
+                    </tr>
+                </table>
+                <br>
+                <table border="1px" cellspacing="5px">
+                    <tr>
+                        <td rowspan="2" width="12%">Permanent Address</td>
+                        <td rowspan="2" width="22%"><textarea name="caddress" style="height: 100%; width: 90%;"
+                                wrap="soft"></textarea></td>
+                        <td width="11%">Village / City</td>
+                        <td width="22%"><input type="text" name="city" pattern="[a-zA-Z]+" style="width: 90%;"></td>
+                        <td width="11%">District</td>
+                        <td width="22%"><input type="text" name="dist" pattern="[a-zA-Z]+" style="width: 90%;"></td>
+                    </tr>
+                    <tr>
+                        <td>State</td>
+                        <td>
+                            <select name="state" style="width: 90%;">
+                                <option value="none">-Select-</option>
+                                <option value="RJ">Rajasthan</option>
+                                <option value="GJ">Gujarat</option>
+                                <option value="MP">Madhya Pradesh</option>
+                                <option value="MH">Maharashtra</option>
+                                <option value="Goa">Goa</option>
+                                <option value="DNDD">Dadra, Nagar Haveli, Daman & Diu</option>
+                            </select>
+                        </td>
+                        <td>Pincode</td>
+                        <td><input type="text" name="pincode" pattern="[0-9]+" style="width: 90%;"></td>
+                    </tr>
+                </table>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend><b>Documents</b></legend>
+                <table border="1px" cellspacing="5px">
+                    <tr>
+                        <td width="16%">Aadhar Card</td>
+                        <td width="17%"><input type="text" name="aadhar" pattern="[0-9]+" size="12"
+                                placeholder="Aadhar Number"></td>
+                        <td width="17%"><input type="file" name="file-aadhar" style="width: 90%;"></td>
+                        <td width="16%">PAN Card</td>
+                        <td width="17%"><input type="text" name="pan" pattern="[A-Z0-9]+" size="10"
+                                placeholder="PAN Number"></td>
+                        <td width="17%"><input type="file" name="file-pan" style="width: 90%;"></td>
+                    </tr>
+                    <tr>
+                        <td>Electricity Bill</td>
+                        <td colspan="2"><input type="file" name="file-elec" style="width: 90%;"></td>
+                        <td>Gas Bill</td>
+                        <td colspan="2"><input type="file" name="file-gas" style="width: 90%;"></td>
+                    </tr>
+                </table>
+        </main>
+        <hr>
+        <footer style="padding-left: 5%; padding-right: 5%;">
+            <p>Please open a Savings Bank account in the name of Mr./Ms. __________________________.</p>
+            <p>The Saving Bank rules and regulations including those relating to Small Account have been explained to me
+                and I agree to abide by the same. An additional photograph is attached.</p>
+            <table width="100%">
+                <tr>
+                    <td width="5%">Date</td>
+                    <td width="25%"><input type="date" name="date1"></td>
+                    <td width="5%">Place</td>
+                    <td width="25%"><input type="text" name="place"></td>
+                    <td width="40%" align="right">Signature</td>
+                </tr>
+            </table>
+            </fieldset>
+            <br>
+            <div align="right"><input type="submit" value="Save"></div>
+        </footer>
+    </form>
+</body>
+</html>

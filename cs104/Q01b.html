@@ -1,0 +1,59 @@
+<!--02. Create a form to take feedback for the recipe in Q1-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz 1b</title>
+    <style>
+        input,
+        select,
+        textarea {
+            width: 80%;
+        }
+    </style>
+</head>
+<body style="background-color: coral; color: brown;">
+    <h2>Leave your comments here!</h2>
+    <hr>
+    <form>
+        <table style="background-color:antiquewhite; margin: auto;" width="80%" border="1px">
+            <tr>
+                <td width="20%">Name*: </td>
+                <td width="80%"><input type="text" name="name" required><br></td>
+            </tr>
+            <tr>
+                <td>Email*: </td>
+                <td><input type="email" name="mail-id" required><br></td>
+            </tr>
+            <tr>
+                <td>Rating*: </td>
+                <td><select name="score" required>
+                        <option value="select">-Select-</option>
+                        <option value="1">1 Star (Awful!)</option>
+                        <option value="2">2 Star (It could do better)</option>
+                        <option value="3">3 Star (It's fine I guess...)</option>
+                        <option value="4">4 Star (It's done well...)</option>
+                        <option value="5">5 Star (Fascinated!!)</option>
+                    </select><br></td>
+            </tr>
+            <tr>
+                <td>Feedback: </td>
+                <td><textarea placeholder="Did you enjoy it??"></textarea><br></td>
+            </tr>
+            <tr>
+                <td>Suggestions: </td>
+                <td><textarea placeholder="Any improvement that we can have here??"></textarea><br></td>
+            </tr>
+            <tr>
+                <td>Share: </td>
+                <td><textarea placeholder="Share your own ideas and recipes!!"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" style="width: 10%;">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <hr>
+</body>
+</html>

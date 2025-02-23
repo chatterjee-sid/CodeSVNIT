@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page 3 | TaxMate</title>
+        <link rel="stylesheet" type="text/css" href="taxCalc.css">
+        <script type="text/javascript" src="taxCalc.js"></script>
+        <style>
+            input{
+                width: 95%;
+                height: 100%
+            }
+            button{
+                width: 25%;
+            }
+            #buttons{
+                display: flex;
+                justify-content: space-between;
+                margin: 0% 5%;
+            }
+            td,th{
+                border: 1px solid black;
+                margin: 0%;
+            }
+        </style>
+    </head>
+    <body class="flexpage">
+        <header>
+            <div id="flexdiv">
+                <img src=".\Logo.png">
+                <a href=".\page1.html" style="color: black"><h1><u>TaxMate</u></h1></a>
+                <img src=".\Logo.png">
+            </div>
+            Based on your income and exemptions, this site can approximately calculate your taxes and help you decide which regime you should use.
+            <br><i>"Never take stress if it's taxes!!"</i>
+            <ul id="navbar">
+                <li class="navbar_li"><a href=".\page1.html" class="navbar_a" title="Home">Home</a></li>
+                <li class="navbar_li"><a href=".\about_us.html" class="navbar_a" title="About Us">About Us</a></li>
+                <li class="navbar_li"><a href=".\contact_us.html" class="navbar_a" title="Contact Us">Contact Us</a></li>
+                <li class="navbar_li"><a href=".\rules.html" class="navbar_a" title="Rules">Rules</a></li>
+            </ul>
+        </header>
+        <hr>
+        <main>
+            <div id="deductionsinfo">
+                <h2 style="color: red; text-align: center;">Enter Deductions Details</h2>
+                <p style="text-align: center">Hover on the <span class="tootip" title="Yeah! Just like that">&#x1F6C8</span> corresponding to the field which you don't understand clearly for more information</p>
+                <table style="margin: auto; width: 90%;">
+                    <tr>
+                        <td style="width: 35%;">Basic Deductions - 80C <span class="tooltip" title="Amount invested/paid in tax saving instruments such as PPF, ELSS mutual funds, LIC premium, etc. (max: 1.5L)">&#x1F6C8</span></td>
+                        <td><input type="number" name="80C"></td>
+                    </tr>
+                    <tr>
+                        <td>Interest from Deposits - 80TTA <span class="tooltip" title="Amount of interest income on deposits in savings account (includes fixed/recurring deposit interest in case of senior citizen)">&#x1F6C8</span></td>
+                        <td><input type="number" name="80TTA"></td>
+                    </tr>
+                    <tr>
+                        <td>Medical Insurance - 80D <span class="tooltip" title="Medical premium & preventive health checkup fees paid for self & family including parents">&#x1F6C8</span></td>
+                        <td><input type="number" name="80D"></td>
+                    </tr>
+                    <tr>
+                        <td>Donations to Charity - 80G <span class="tooltip" title="Amount paid as donation to charitable insitutions or certain recognized funds">&#x1F6C8</span></td>
+                        <td><input type="number" name="80G"></td>
+                    </tr>
+                    <tr>
+                        <td>Interest on Educational Loan - 80E <span class="tooltip" title="Amount of interest paid on loan taken for higher education">&#x1F6C8</span></td>
+                        <td><input type="number" name="80E"></td>
+                    </tr>
+                    <tr>
+                        <td>Interest on Housing Loan - 80EEA <span class="tooltip" title="Amount of interest paid on housing loan sanctioned during FY 2022-2023 (max: 1.5L)">&#x1F6C8</span></td>
+                        <td><input type="number" name="80EEA"></td>
+                    </tr>
+                    <tr>
+                        <td>Employee's contribution to NPS - 80CCD <span class="tooltip" title="Includes voluntary contribution to National Pension Scheme (NPS) under section 80CCD(1) and 80CCD(1B)">&#x1F6C8</span></td>
+                        <td><input type="number" name="80CCD"></td>
+                    </tr>
+                </table>
+                <br>
+                <div style="margin: 0% 5%;">*Write '0' wherever not applicable</div>
+                <br>
+                <div id="buttons">
+                    <button id="returnButton2" style="background-color: red;" onclick="return2()">Go to Previous</button>
+                    <button id="submitButton3" style="background-color:forestgreen;" onclick="capture3()">Calculate!</button>
+                </div>
+                <br>
+            </div>
+        </main>
+        <footer>
+            TaxMate: Income Tax calculator<br>
+            Created by Siddhartha Chatterjee<br>
+            Adm. no. U23CS028<br>
+            DoCSE, B.Tech-I, Div. F, SVNIT Surat<br>
+            Mini-Project for CS104: Web Programming & Python                
+        </footer>
+    </body>
+</html>

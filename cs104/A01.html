@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WPP Assignment 1</title>
+    <style>
+        #signup #signuphover {
+            visibility: hidden;
+            background-color: white;
+            color: black;
+        }
+        #signup:hover #signuphover {
+            visibility: visible;
+            transition-delay: 0.3s;
+        }
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body style="background-color: palegreen;">
+    <header style="background-color: limegreen; border: 1px solid black;">
+        <table style="margin: auto; text-align: center" width="90%">
+            <tr>
+                <td width="10%">
+                    <img src="https://www.svnit.ac.in/images/logo.png" alt="SVNIT Logo" height="100px">
+                </td>
+                <td width="80%">
+                    <h3>Sardar Vallabhbhai National Institute of Technology<br>Ichhanath, Surat, Gujarat 395007</h3>
+                    <h1 style="font-size: 3.5em; font-family: 'Courier New', Courier, monospace;"><b>&lt;/NIT Surat Connect/&gt;</b></h1>
+                    <span style="font-size: 1.25em">For SVNITians, by SVNITians</span>
+                </td>
+                <td width="10%">
+                    <img src="https://www.careerindia.com/img/2014/05/27-svnitsurat.jpg" alt="SVNIT Old Gate 1" height="100px">
+                </td>
+            </tr>
+        </table>
+    </header>
+    <table width="100%">
+        <tr>
+            <th width="10%" style="background-color: limegreen; border: 1px solid black;">News: </th>
+            <td width="90%" style="background-color: white; border: 1px solid black;">
+                <marquee onmouseover="this.stop();" onmouseout="this.start();" scrolldelay="2">
+                    <a href="https://www.instagram.com/reel/C2Cr6fctySn/" target="_blank"># MINDBEND 2024 Orientation on January 16 </a>| 
+                    <a href="https://www.instagram.com/p/C2CDer4p9dt/" target="_blank"># MTB, Sarabhai & Narmad Bhavan celebrates Lohri at Canteen Cements on January 13 </a>|
+                    <a href="https://www.svnit.ac.in/Data/Notice/2024/January/DOC120124-12012024093025.pdf" target="_blank"># Fee Payment Deadline extended to January 22 </a>|
+                    <a href="https://www.instagram.com/p/C2AIt2zpy5M/" target="_blank"># SVNIT bags 1st position in Inter NIT Cricket Tournament at NIT Trichy </a>|
+                </marquee>
+            </td>
+        </tr>
+    </table>
+    <br><br><br>
+    <main>
+        <table width="90%"
+            style="background-color: white; padding: 1%; margin: auto; border: 1px solid palegreen; border-collapse: collapse;">
+            <tr style="text-align: center;">
+                <th width="30%" style="background-color: limegreen; border: 1px solid black;">What's here?</th>
+                <th width="5%" rowspan="4" style="background-color: palegreen;"></th>
+                <th width="30%" style="background-color: limegreen; border: 1px solid black;">Login</th>
+                <th width="5%" rowspan="4" style="background-color: palegreen;"></th>
+                <th width="30%" style="background-color: limegreen; border: 1px solid black;">Important Links</th>
+            </tr>
+            <tr>
+                <td style="padding-left: 5%; border: 1px solid black;">
+                    <b>Are you a Fresher?</b>
+                    <ul>
+                        <li>Feeling lost in New Environment?</li>
+                        <li>Unaware of stuff going around?</li>
+                        <li>In a need of support to adjust?</li>
+                    </ul>
+                </td>
+                <td rowspan="3" style="border: 1px solid black;">
+                    <center>
+                        <form>
+                            <br>
+                            <input type="text" name="uname" placeholder="Username">
+                            <br><br>
+                            <input type="text" name="rollno" placeholder="Roll No.">
+                            <br><br>
+                            <input type="password" name="password" placeholder="Password">
+                            <br><br>
+                            <input type="text" name="captcha" placeholder="Captcha (For Prototype)" id="captcha">
+                            <br><br>
+                            <img src="GenerateCaptcha.ashx" alt="Captcha">
+                            <br><br>
+                            <input type="submit">
+                            <br><br>
+                            New Student?
+                            <div id="signup"><span style="color:blue;"><u>Sign Up</u></span><br>
+                                <span id="signuphover">[For prototype. Link does not work.]</span>
+                            </div>
+                        </form>
+                    </center>
+                </td>
+                <td style="padding-left: 5%; border: 1px solid black;">
+                    <ul>
+                        <li><a href="https://www.svnit.ac.in/" target="_blank">SVNIT Main</a></li>
+                        <li><a href="https://mis.svnit.ac.in/svnit/" target="_blank">MIS Portal</a></li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-left: 5%; border: 1px solid black;">
+                    <b>Are you a Senior?</b>
+                    <ul>
+                        <li>Tired of the "ragger" reputation?</li>
+                        <li>Remember the trouble to adjust?</li>
+                        <li>Want to show support / mentor?</li>
+                    </ul>
+                </td>
+                <td rowspan="2" style="padding-left: 2%; border: 1px solid black;">
+                    <form>
+                        <span style="padding-left: 10%;">Have any suggestions for us?</span>
+                        <br><br>
+                        <textarea placeholder="Leave your feedback here... (it's anonymous)" name="feeback"
+                            style="height: 50px; width: 90%;" wrap="soft"></textarea>
+                        <br>
+                        <input type="submit">
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center; background-color:limegreen; border: 1px solid black;"><b>Join Us!</b>
+                </td>
+            </tr>
+        </table>
+    </main>
+    <br><br><br>
+    <footer style="padding: 1%; background-color: rgb(32, 190, 32); border: 1px solid black;">WPP Assignment
+        1<br>Siddhartha Chatterjee<br>U23CS028</footer>
+</body>
+
+</html>

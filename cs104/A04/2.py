@@ -1,0 +1,10 @@
+#02. WAP to perform different arithmatic operations on numbers in Python
+a=int(input("Enter number a: "))
+b=int(input("Enter number b: "))
+print("a + b =",a+b)
+print("a - b =",a-b)
+print("a * b =",a*b)
+print("a / b =",a/b)
+print("a % b =",a%b)
+print("a // b =",a//b)
+print("a ^ b =",a**b)

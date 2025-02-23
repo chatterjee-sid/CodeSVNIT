@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <title>Page 2 | TaxMate</title>
+        <link rel="stylesheet" type="text/css" href="taxCalc.css">
+        <script type="text/javascript" src="taxCalc.js"></script>
+        <style>
+            input{
+                width: 95%;
+                height: 100%;
+            }
+            button{
+                width: 25%;
+            }
+            #buttons{
+                display: flex;
+                justify-content: space-between;
+                margin: 0% 5%;
+            }
+        </style>
+    </head>
+    <body class="flexpage">
+        <header>
+            <div id="flexdiv">
+                <img src=".\Logo.png">
+                <a href=".\page1.html" style="color: black"><h1><u>TaxMate</u></h1></a>
+                <img src=".\Logo.png">
+            </div>
+            Based on your income and exemptions, this site can approximately calculate your taxes and help you decide which regime you should use.
+            <br><i>"Never take stress if it's taxes!!"</i>
+            <ul id="navbar">
+                <li class="navbar_li"><a href=".\page1.html" class="navbar_a" title="Home">Home</a></li>
+                <li class="navbar_li"><a href=".\about_us.html" class="navbar_a" title="About Us">About Us</a></li>
+                <li class="navbar_li"><a href=".\contact_us.html" class="navbar_a" title="Contact Us">Contact Us</a></li>
+                <li class="navbar_li"><a href=".\rules.html" class="navbar_a" title="Rules">Rules</a></li>
+            </ul>
+        </header>
+        <hr>
+        <main>
+            <div id="incomeinfo">
+                <h2 style="color: red; text-align: center">Enter Income Details</h2>
+                <p style="text-align: center">Hover on the <span class="tootip" title="Yeah! Just like that">&#x1F6C8</span> corresponding to the field which you don't understand clearly for more information</p>
+                <table style="margin: auto; width: 90%;">
+                    <tr>
+                        <td style="width: 35%">Income from Salary <span class="tooltip" title="Salary before reducing HRA, LTA, standard deductions & professional tax. If applicable, reduce leave encashment (max: 25L)">&#x1F6C8</span></td>
+                        <td><input type="number" name="salary" id="salary"></td>
+                    </tr>
+                    <tr>
+                        <td>Exempt Allowances <span class="tooltip" title="HRA, LTA, Professional Tax and any Other Exemptions">&#x1F6C8</span></td>
+                        <td><input type="number" name="exemptAllowances" id="exemptAllowances"></td>
+                    </tr>
+                    <tr>
+                        <td>Income from Interest <span class="tooltip" title="Includes interest from savings bank, deposits and other interest">&#x1F6C8</span></td>
+                        <td><input type="number" name="interestIncome" id="interestIncome"></td>
+                    </tr>
+                    <tr>
+                        <td>Interest on Home Loan - Self occupied <span class="tooltip" title="Interest paid on housing loan taken for self-occupied property">&#x1F6C8</span></td>
+                        <td><input type="number" name="interestHomeLoanSO" id="interestHomeLoanSO"></td>
+                    </tr>
+                    <tr>
+                        <td>Rental Income Received <span class="tooltip" title="Annual rent received on let-out property">&#x1F6C8</span></td>
+                        <td><input type="number" name="rentalIncome" id="rentalIncome"></td>
+                    </tr>
+                    <tr>
+                        <td>Interest on Home Loan - Let Out <span class="tooltip" title="Interest paid on housing loan taken for rented/let-out property">&#x1F6C8</span></td>
+                        <td><input type="number" name="interestHomeLoanLO" id="interestHomeLoanLO"></td>
+                    </tr>
+                    <tr>
+                        <td>Income from Digital Assets <span class="tooltip" title="Net Income from Digital Assets, taxed at 30%">&#x1F6C8</span></td>
+                        <td><input type="number" name="incomeDigitalAssets" id="incomeDigitalAssets"></td>
+                    </tr>
+                    <tr>
+                        <td>Other Income <span class="tooltip" title="Includes taxable freelancing income or any other taxable income">&#x1F6C8</span></td>
+                        <td><input type="number" name="otherIncome" id="otherIncome"></td>
+                    </tr>
+                </table>
+                <br>
+                <div style="margin: 0% 5%;">*Write '0' wherever not applicable</div>
+                <br>
+                <div id="buttons">
+                    <button id="returnButton1" style="background-color: red;" onclick="return1()">Go to Previous</button>
+                    <button id="submitButton2" style="background-color: blue;" onclick="capture2()">Go to Next</button>
+                </div>
+                <br>
+            </div>
+        </main>
+        <footer>
+            TaxMate: Income Tax calculator<br>
+            Created by Siddhartha Chatterjee<br>
+            Adm. no. U23CS028<br>
+            DoCSE, B.Tech-I, Div. F, SVNIT Surat<br>
+            Mini-Project for CS104: Web Programming & Python                
+        </footer>
+    </body>
+</html>

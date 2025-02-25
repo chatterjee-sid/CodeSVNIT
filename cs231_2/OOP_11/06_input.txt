@@ -1,0 +1,6 @@
+Alice 24 10000
+Bob 25 12000
+Charlie 26 14000
+Diane 27 16000
+Eve 28 18000
+Felix 29 20000

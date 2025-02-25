@@ -1,0 +1,3 @@
+Roll_No   Stu_Name  Dept.     Percentage
+1         Bob       CSE       58%       
+3         Mili      CSE       75%       

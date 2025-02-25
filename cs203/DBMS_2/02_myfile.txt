@@ -1,0 +1,6 @@
+Roll_No   Stu_Name  Dept.     Percentage
+1         Bob       CSE       58%       
+2         Maria     AI        87%       
+3         Mili      CSE       75%       
+4         Neel      Elec      90%       
+6         Jack      AI        71%       

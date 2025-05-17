@@ -1,0 +1,18 @@
+<launch>
+  <param name="use_sim_time" value="true" />
+
+  <node pkg="gmapping" type="slam_gmapping" name="slam_gmapping" output="screen">
+    <param name="odom_frame" value="odom"/>
+    <param name="odom_frame" value="map"/>
+    <param name="base_frame" value="base_link"/>
+    <param name="map_update_interval" value="5.0"/>
+    <param name="maxUrange" value="8.0"/>
+    <param name="minimumScore" value="100"/>
+    <param name="particles" value="30"/>
+  </node>
+
+  <!-- Launch RViz -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find my_robot_slam)/rviz/gmapping_config.rviz" required="true"/>
+
+</launch>
+

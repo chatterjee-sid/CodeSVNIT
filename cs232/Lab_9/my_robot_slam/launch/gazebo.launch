@@ -1,0 +1,14 @@
+<launch>
+  <include file="$(find gazebo_ros)/launch/empty_world.launch"/>
+  <param name="robot_description" command="$(find xacro)/xacro '$(find my_robot_slam)/urdf/robot.xacro'" />
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"
+        args="-param robot_description -urdf -model my_bot"
+        output="screen"/>
+<rosparam file="$(find my_robot_slam)/config/controllers.yaml" command="load"/>
+<node name="spawn_env" pkg="gazebo_ros" type="spawn_model" args="-file $(find my_robot_slam)/model/model.sdf -sdf -model my_environment" output="screen"/>
+<node name="controller_spawner" pkg="controller_manager" type="spawner"
+      args="joint_state_controller diff_drive_controller" />
+
+</launch>

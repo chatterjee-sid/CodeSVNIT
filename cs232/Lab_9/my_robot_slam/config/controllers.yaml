@@ -1,0 +1,22 @@
+joint_state_controller:
+  type: joint_state_controller/JointStateController
+  publish_rate: 50
+
+diff_drive_controller:
+  type: "diff_drive_controller/DiffDriveController"
+  left_wheel: "left_wheel_joint"
+  right_wheel: "right_wheel_joint"
+  publish_rate: 50.0
+
+  wheel_separation: 0.3
+  wheel_radius: 0.05
+
+  cmd_vel_timeout: 0.25
+  use_stamped_vel: false
+
+  enable_odom_tf: true
+  base_frame_id: base_link
+  odom_frame_id: odom
+
+  odometry_topic: odom
+

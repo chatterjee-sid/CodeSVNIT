@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4b</title>
+    <style>
+        input{
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <p>Brute Force Attack Simulation</p>
+    <script>
+        var credentials = {
+            "sxndeshhh":"password",
+            "nathsoactive":"password1",
+            "deepindarkness2":"iamgod",
+            "icewolf125":"qwerty",
+            "mash78avs":"masterofall",
+            "dreary10":"12345"
+        };
+        const commonpass = ["111111","123123","123456789","password1","qwerty","abcdef","abc123"];
+        function myfunc(){
+            const a = document.getElementById("uid").value;
+            //const b = document.getElementById("pass").value;
+            const output = document.getElementById("output")
+            var grant = false;
+            for(let i=0; i<commonpass.length; i++){
+                b = "";
+                for(let j=0; j<commonpass[i].length; j++){
+                    b += commonpass[i][j]
+                    if(a in credentials){
+                        if(credentials[a]==b){
+                            output.innerHTML = "Access Granted!! Welcome " + a;
+                            output.style.color = "green";
+                            grant = true;
+                            break;
+                        } else{
+                            output.innerHTML = "Incorrect Password. Try Again.";
+                            output.style.color = "red";
+                        }
+                    } else{
+                        output.innerHTML = "Guest user. Welcome " + a;
+                        output.style.color = "blue";
+                        break;
+                    }
+                }
+                if(grant) break;
+            }
+        }
+    </script>
+    <h2>CS233 Information Security</h2>
+    <h3>Lab Assignment 4</h3>
+    <h4>U23CS028</h4>
+    <p>Enter UID: <input type="text" name="uid" id="uid" placeholder="uid"></p>
+    <p>Enter Password: <input type="password" name="pass" id="pass" placeholder="pass"></p>
+    <button onclick="myfunc()">BFAS GO!!</button>
+    <div id="output"></div>
+</body>
+</html>

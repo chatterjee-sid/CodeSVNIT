@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XSS Demonstration</title>
+</head>
+<body>
+    <h2>CS233 Information Security</h2>
+    <h3>Lab Assignment 3</h3>
+    <h4>U23CS028</h4>
+    <p>Enter Text: <input type="text" id="userInput"></p>
+    <button onclick="reflected1()">Submit (Vulnerable)</button>
+    <button onclick="reflected2()">Submit (escapeHTML)</button>
+    <button onclick="store()">Submit (stored)</button>
+    <h4>Reflected Input:</h4>
+    <div id="output"></div>
+    <h4>Stored Inputs:</h4>
+    <div id="storedData"></div>
+
+    <script>
+        function reflected1() {
+            let userInput = document.getElementById("userInput").value;
+            document.getElementById("output").innerHTML = userInput;
+        }
+
+        function escapeHtml(unsafe) {
+            return unsafe.replace(/&/g, "&amp;")
+                         .replace(/</g, "&lt;")
+                         .replace(/>/g, "&gt;")
+                         .replace(/"/g, "&quot;")
+                         .replace(/'/g, "&#039;");
+        } //regex used
+
+        function reflected2() {
+            let userInput = document.getElementById("userInput").value;
+            document.getElementById("output").innerHTML = escapeHtml(userInput);
+        }
+
+        function store() {
+            let userInput = document.getElementById("userInput").value;
+            let storedData = localStorage.getItem("storedXSS") || "";
+            storedData += `<p>${userInput}</p>`;
+            localStorage.setItem("storedXSS", storedData);
+            displayStoredData();
+        }
+
+        function displayStoredData() {
+            let storedData = localStorage.getItem("storedXSS");
+            if (storedData) {
+                document.getElementById("storedData").innerHTML = storedData;
+            }
+        }
+        displayStoredData(); //permanent storage
+    </script>
+</body>
+</html>

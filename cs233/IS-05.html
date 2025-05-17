@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>CS233 Information Security</h2>
+    <h3>Lab Assignment 5</h3>
+    <h3>Roll no. U23CS028</h3>
+    <input type="text" id="username" name="username"><br>
+    <input type="password" id="password" name="password"><br>
+    <button onclick="login()">Login</button>
+    <h3>Attack Simulation</h3>
+    <button onclick="stealSession()">Steal Session</button>
+    <script>
+        function login() {
+            document.cookie = `sessionID = ${btoa(Date.now() + Math.random())}; path=/`;
+            document.cookie = `username = ${document.getElementById('username').value}; path=/`;
+            document.cookie = `password = ${document.getElementById('password').value}; path=/`;
+            alert("Cookie set");
+        }
+
+        function stealSession() {
+            alert(`Session Cookies: ${document.cookie}.\nHappy hacking >:D`);
+        }
+    </script>
+</body>
+</html>
+
+
+<!-- python -m http.server 8000 -->

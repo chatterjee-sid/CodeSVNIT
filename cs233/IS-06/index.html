@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+        .login-container {
+            background: white;
+            padding: 20px;
+            border: 1px solid black;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        label {
+            display: block;
+            text-align: left;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        input {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h4>CS233 - IS Lab 6</h4>
+        <h4>U23CS028</h4>
+        <hr>
+        <h2>Login</h2>
+        Username: <input type="text" id="username">
+        Password: <input type="password" id="password">
+        <button onclick="go()">Login</button>
+    </div>
+    <script>
+        function go(){;
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            alert("Login Attempt: " + username + " | " + password);
+        };
+    </script>
+</body>
+</html>

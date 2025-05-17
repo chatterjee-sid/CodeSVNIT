@@ -1,0 +1,37 @@
+;8b / 8b division
+lda 00h
+mov l,a
+mvi h,0
+lda 01h
+mov b,a
+mvi c,8
+loop: call shifter
+dcr c
+jnz loop
+shld 03h; quotient at 0003H,remainder at 0004H
+hlt
+
+shifter: dad h
+mov a,h
+sub b
+jp fine
+add b
+ret
+fine: mov h,a
+inr l
+ret
+
+;73 - 01001001
+;06 - 00000110
+
+;8 00000000 01001001
+;7 00000000 10010010
+;6 00000001 00100100
+;5 00000010 01001000
+;4 00000100 10010000
+;3 00001001 00100000 -> 00000011 00100001
+;2 00000110 01000010 -> 00000000 01000011
+;1 00000000 10000110
+;0 00000001 00001100
+
+;00000001 00001100

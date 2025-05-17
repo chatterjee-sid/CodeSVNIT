@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4a</title>
+    <style>
+        input{
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <p>An entirely vulnerable webpage</p>
+    <script>
+        var credentials = {
+            "sxndeshhh":"bixerrACE",
+            "nathsoactive":"c@mERAshy",
+            "deepindarkness2":"iamgod",
+            "icewolf125":"asdfghjkl",
+            "mash78avs":"master0fA11",
+            "dreary10":"dreary10"
+        };
+        function myfunc(){
+            const a = document.getElementById("uid").value;
+            const b = document.getElementById("pass").value;
+            const output = document.getElementById("output")
+            if(a in credentials){
+                if(credentials[a]==b){
+                    output.innerHTML = "Access Granted!! Welcome " + a;
+                    output.style.color = "green";
+                } else{
+                    output.innerHTML = "Incorrect Password. Try Again.";
+                    output.style.color = "red";
+                }
+            } else{
+                output.innerHTML = "Guest user. Welcome " + a;
+                output.style.color = "blue";
+            }
+        }
+    </script>
+    <h2>CS233 Information Security</h2>
+    <h3>Lab Assignment 4</h3>
+    <h4>U23CS028</h4>
+    <p>Enter UID: <input type="text" name="uid" id="uid" placeholder="uid"></p>
+    <p>Enter Password: <input type="password" name="pass" id="pass" placeholder="pass"></p>
+    <button onclick="myfunc()">Submit!</button>
+    <div id="output"></div>
+</body>
+</html>

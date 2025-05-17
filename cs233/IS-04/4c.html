@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4c</title>
+    <style>
+        input {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <p>Probably a bit secure webpage</p>
+    <script>
+        async function crypter(thispass) {
+            const encoder = new TextEncoder();
+            const hashed = await crypto.subtle.digest("SHA-256", encoder.encode(thispass));
+            return Array.from(new Uint8Array(hashed)).map(b => b.toString(16).padStart(2, '0')).join('');
+        }
+        let credentials = {};
+        async function credentialInitialize(){
+            credentials = {
+                "sxndeshhh": await crypter("bixerrACE"),
+                "nathsoactive": await crypter("c@mERAshy"),
+                "deepindarkness2": await crypter("iamgod"),
+                "icewolf125": await crypter("asdfghjkl"),
+                "mash78avs": await crypter("master0fA11"),
+                "dreary10": await crypter("dreary10")
+            };
+        }
+        async function myfunc() {
+            const a = document.getElementById("uid").value;
+            const b = document.getElementById("pass").value;
+            const output = document.getElementById("output");
+            if (a in credentials) {
+                const hashedPass = await crypter(b);
+                if (credentials[a] === hashedPass) {
+                    output.innerHTML = `Access Granted! Welcome ${a}`;
+                    output.style.color = "green";
+                } else {
+                    output.innerHTML = `Incorrect Password. Try Again.`;
+                    output.style.color = "red";
+                }
+            } else {
+                output.innerHTML = `Guest user. Welcome ${a}`;
+                output.style.color = "blue";
+            }
+        }
+        credentialInitialize();
+    </script>
+    <h2>CS233 Information Security</h2>
+    <h3>Lab Assignment 4</h3>
+    <h4>U23CS028</h4>
+    <p>Enter UID: <input type="text" name="uid" id="uid" placeholder="uid"></p>
+    <p>Enter Password: <input type="password" name="pass" id="pass" placeholder="pass"></p>
+    <button onclick="myfunc()">Submit!</button>
+    <div id="output"></div>
+</body>
+</html>
